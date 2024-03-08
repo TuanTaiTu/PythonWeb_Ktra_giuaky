@@ -1,0 +1,13 @@
+{% extends "pages/base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+{% for list in Baiviet %}
+    <h5>{{list.date|date:'d/m/Y'}}
+        <a href='/template1/{{list.id}}'>{{list.title}}</a>
+    </h5> <hr>
+{% endfor %}
+
+{% endblock %}

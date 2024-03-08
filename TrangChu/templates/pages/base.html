@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <link rel="icon" href="./tuanpham.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=2" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href='{% static 'css/bootstrap.min.css' %}' type='text/css'>
+    <style>
+        html, body{
+            height: 100%;
+            background-color: #67e6ff;
+        }
+    </style>    
+    
+    <title>{% block title %}{% endblock %}</title>
+    
+  </head>
+
+      <body>
+        <center style='min-height:95%'>
+            <div>
+                <div class='navbar'>
+                
+                        <navbar>
+                            <nav><a href='/'>Home Page</a></nav>
+                            <nav><a href="{% url 'template1' %}">Blog Page</a></nav>
+                            {% comment %} <nav><a href={%urls 'contact'%}>Contact Page</a></nav> {% endcomment %}
+                        </navbar>
+                    
+                </div>
+                <div class='content'>
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+        </center>
+      </body>
+  <footer >
+    <div >
+        <div class='container-fluid position-fixed'>
+            <a href='https://www.facebook.com/profile.php?id=100033277362140' target="_blank">Facebook</a> |
+            <a href='https://www.instagram.com/phbatuan/' target="_blank">Instagram</a> |
+            <a href='https://www.linkedin.com/in/tu%E1%BA%A5n-ph%E1%BA%A1m-847080220/' target="_blank">Linkedin</a>
+        </div>
+    </div>
+  </footer>
+  </html>
